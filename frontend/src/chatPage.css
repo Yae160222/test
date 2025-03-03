@@ -1,0 +1,320 @@
+@import url("./material-theme/css/dark.css");
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}
+
+.MainPage {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: var(--md-sys-color-on-surface);
+}
+
+.Chatslist {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-sys-color-surface-container-low);
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  color: var(--md-sys-color-on-surface);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.Section2TitleBar {
+  width: 100%;
+  height: 7%;
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-surface-container-lowest);
+  margin: 0;
+  padding-top: 5%;
+  padding-left: 5%;
+  box-sizing: border-box;
+  text-justify: distribute-all-lines;
+}
+.Section2 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--md-sys-color-surface-container-low);
+  height: 100%;
+  width: 25%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* padding: 5px; */
+  color: var(--md-sys-color-on-surface);
+}
+
+.ChatPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; /* Adjusted to flex-end to align items to the bottom */
+  background-color: var(--md-sys-color-surface-container);
+  height: 100%;
+  flex: 1;
+  color: var(--md-sys-color-on-surface);
+}
+
+.ChatItem {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: 7px;
+  background-color: var(--md-sys-color-surface);
+  padding: 5px;
+  color: var(--md-sys-color-on-surface);
+}
+.ChatItem:hover {
+  background-color: var(--md-sys-color-surface-bright);
+}
+
+.MessageWindow {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  background-color: var(--md-sys-color-surface-container-high);
+  flex: 1;
+  width: 100%;
+  color: var(--md-sys-color-on-surface);
+  overflow-y: auto;
+}
+
+/* Customize scrollbar track */
+.MessageWindow::-webkit-scrollbar {
+  width: 3px; /* Initial width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+.MessageWindow::-webkit-scrollbar-track {
+  background: var(
+    --md-sys-color-surface-container
+  ); /* Background color of the track */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Style the scrollbar handle */
+.MessageWindow::-webkit-scrollbar-thumb {
+  background: var(
+    --md-sys-color-tertiary-fixed
+  ); /* Color of the scrollbar handle */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Increase scrollbar width on hover */
+.MessageWindow::-webkit-scrollbar:hover {
+  width: 5px; /* Width of the scrollbar when hovered */
+}
+
+/* Style the scrollbar handle on hover */
+.MessageWindow::-webkit-scrollbar-thumb:hover {
+  background: var(
+    --md-sys-color-tertiary-fixed-dim
+  ); /* Color of the scrollbar handle on hover */
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 24px;
+  margin-right: 20px;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.User {
+  display: flex;
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  /*background-color: var(--md-sys-color-primary-container);*/
+  color: var(--md-sys-color-on-primary-container);
+  max-width: 80%;
+}
+
+.Other {
+  display: flex;
+  align-self: flex-start;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  /*background-color: var(--md-sys-color-secondary-container);*/
+  color: var(--md-sys-color-on-secondary-container);
+  word-wrap: break-word;
+  max-width: 80%;
+}
+.UserM {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--md-sys-color-tertiary-container);
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--md-sys-color-on-tertiary-container);
+  word-break: break-word; /* Breaks long words onto the next line */
+  overflow-wrap: break-word; /* Ensures text wraps within its container */
+}
+
+.OtherM {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* Allows wrapping of child elements */
+  align-items: center; /* Aligns items vertically centered */
+  background-color: var(--md-sys-color-tertiary-fixed);
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--md-sys-color-on-tertiary-fixed);
+  word-break: break-word; /* Breaks long words onto the next line */
+  overflow-wrap: break-word; /* Ensures text wraps within its container */
+}
+
+.Input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  width: 100%; /* Adjust maximum width as needed */
+  background-color: var(--md-sys-color-surface-container-low);
+  box-sizing: border-box;
+  color: var(--md-sys-color-on-surface);
+  height: 5%;
+}
+
+.input {
+  width: 80%;
+  height: 100%; /* Inherit height from parent */
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 5px; /* Example border radius */
+  box-sizing: border-box; /*Ensures padding is included in width */
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  margin: 0;
+}
+
+.button {
+  border: none; /* Example border style */
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  cursor: pointer; /* Example cursor style */
+  height: 100%;
+  flex: 1;
+}
+
+.userName {
+  align-self: flex-start;
+  color: var(--md-sys-color-secondary);
+  text-underline-position: below;
+  font-size: small;
+  cursor: pointer;
+}
+
+.userName:hover {
+  text-decoration-line: underline;
+}
+
+.VerticalNavBar {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  height: 100%; /* Full height of the parent container */
+  width: 3%; /* Adjust as needed */
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.Box {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 56px;
+  margin: 10%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+}
+
+.Box:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+.boxIcon {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin: 12px;
+}
+
+.profilePic {
+  margin: 20px;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+}
+
+.Notification {
+  width: 100%;
+  height: max-content;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: 7px;
+  background-color: var(--md-sys-color-surface);
+  padding: 5px;
+  color: var(--md-sys-color-on-surface);
+  box-sizing: border-box;
+}
+
+/* .accept {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-image: url("../public/cross.png"); 
+  background-color: #d4edda;
+  border: 2px solid #c3e6cb; 
+}
+
+.reject {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-image: url("../public/tick.png");
+  background-color: #f8d7da; 
+  border: 2px solid #f5c6cb; 
+} */
+
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ChatTitleBar {
+  display: flex;
+  width: 100%;
+  height: 7%;
+}
+
+.groupProfilePic {
+  align-self: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: var(--md-sys-color-on-primary-container);
+}

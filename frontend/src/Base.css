@@ -1,0 +1,10 @@
+.output{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    /*background-color: aqua;*/
+}
